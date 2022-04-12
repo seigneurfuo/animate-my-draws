@@ -54,7 +54,7 @@ class MainWindow(QMainWindow):
             cmd += ["-loop", loop_nb]
 
         folderpath = self.lineEdit.text()
-        frames_folder = shlex.quote(os.path.join(folderpath, "%06d.png"))
+        frames_folder = shlex.quote(os.path.join(folderpath, self.lineEdit_2.text()))
         fps = str(self.spinBox.value())
 
         cmd += ["-framerate", fps, "-i", frames_folder]
